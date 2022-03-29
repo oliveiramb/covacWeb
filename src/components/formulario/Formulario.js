@@ -14,7 +14,7 @@ const area = {
 const input = {
   textAlign: "center",
   backgroundColor: "#f0f8ff",
-  color: "blue",
+  color: "black",
   borderRadius: 10, 
   width: 400,
   height: 50,

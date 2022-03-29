@@ -179,7 +179,7 @@ const Home = () => {
             height: 100,
             border: "none",
             fontFamily: "Verdana",
-            position: 'absolute', left: '50%', top: '270%',
+            position: 'absolute', left: '50%', top: '70%',
             transform: 'translate(-50%, 50%)',  
       }  
 
