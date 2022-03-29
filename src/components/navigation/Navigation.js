@@ -35,12 +35,13 @@ const Nav = () => {
     const image = {
   width: 50,
   height: 40,
+
 }
     return (
         <nav style={nav}>
             <ul style={navLinks}>
                 <Link style={link} to="/vacinas">
-                    <img src={vacina} alt="vacina" style={image}/>
+                    <img src={vacina} alt="vacina" style={image}  f/>
                 <li>Vacinas</li>
                 </Link>
 

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import covacLogo from "../components/icons/covacLogo.png"
 import googleplayLogo from "../components/icons/googleplay.png"
+import covacApp from "../components/icons/covacAppLogo.png"
 import Modal from "react-modal/lib/components/Modal";
 
 
@@ -178,9 +179,16 @@ const Home = () => {
             height: 100,
             border: "none",
             fontFamily: "Verdana",
-            position: 'absolute', left: '50%', top: '50%',
+            position: 'absolute', left: '50%', top: '270%',
             transform: 'translate(-50%, 50%)',  
       }  
+
+      const covacAppLogo = {
+        position: 'absolute', left: '50%', top: '230%',
+        transform: 'translate(-50%, 50%)',  
+        width: 300,
+        height: 300,
+      }
 
     return (
         <div style={nav}>
@@ -321,6 +329,7 @@ A variante não é tão preocupante quanto a variante Delta nos Estados Unidos, 
            
            <div>
                <h1 style={playStore}>Você tambem pode baixar o nosso aplicativo no Google Play Store.</h1>
+               <img src={covacApp} alt="covacAppLogo" style={covacAppLogo}/>
                <img src={googleplayLogo} alt="googleplay" style={googleplay}/>
            </div>
            
