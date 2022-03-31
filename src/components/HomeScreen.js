@@ -251,7 +251,7 @@ const Home = () => {
            onRequestClose={()=> setModalIsOpen7(false)}
            >
                <h2 style={textTitle}>Lambda</h2>
-               <p style={text }>Esta variante do coronavírus foi identificada pela primeira vez no Peru em dezembro de 2020. Em 14 de junho de 2021 foi designada como uma variante de interesse.
+               <p style={text}>Esta variante do coronavírus foi identificada pela primeira vez no Peru em dezembro de 2020. Em 14 de junho de 2021 foi designada como uma variante de interesse.
 
 A variante não é tão preocupante quanto a variante Delta nos Estados Unidos, que tem impulsionado um aumento de casos em todo o país, mas os primeiros estudos sugerem que ela tem mutações que a tornam mais transmissível do que a variante original do coronavírus.</p>
                <button style={buttonPopup} onClick={() => setModalIsOpen7(false)}>Close</button>
