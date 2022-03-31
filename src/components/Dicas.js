@@ -4,74 +4,58 @@ import { Link } from "react-router-dom";
 import Navigation from "./navigation/Navigation"
 
 const Login = () =>  {
+
+  const div = {
+    position: 'absolute', left: '50%', top: '20%',
+    transform: 'translate(-50%, 50%)', 
+}
+
+
+const button = {
+    color: "white",
+    flexDirection: "row",
+    backgroundColor: "black",
+    textAlign: "center",
+    borderRadius: 10,
+    width: 300,
+    height: 100,
+    border: "none",
+    fontFamily: "Verdana",
+    margin: 20,    
+}
+ 
+const textTitle = {
+          position: 'absolute', left: '50%', top: '25%',
+          transform: 'translate(-50%, 10%)',
+          fontFamily: "Verdana",
+}
   return (
     <div>
       <Navigation/>
-      <h1 style={{
-          position: 'absolute', left: '50%', top: '20%',
-          transform: 'translate(-50%, 10%)',
-          fontFamily: "Verdana",
-        }}>Dicas contra a Covid-19</h1>
+      <h1 style={textTitle}>Dicas contra a Covid-19</h1>
         
+
+        <div style={div}>
+          <div>
         <Link to="/dicas/sintomas">
-        <button style = {{
-            color: "white",
-            backgroundColor: "black",
-            textAlign: "center",
-            borderRadius: 10, 
-            width: 300,
-            height: 100,
-            fontFamily: "Verdana",
-            margin: 10, 
-            position: 'absolute', left: '35%', top: '33%',
-            transform: 'translate(-50%, 10%)',
-        }}>Sintomas</button>
+        <button style = {button}>Sintomas</button>
         </Link>
 
         <Link to="/dicas/transmissao">
-        <button style = {{
-            color: "white",
-            backgroundColor: "black",
-            textAlign: "center",
-            borderRadius: 10,
-            width: 300,
-            height: 100,
-            fontFamily: "Verdana",
-            margin: 10, 
-            position: 'absolute', left: '60%', top: '33%',
-            transform: 'translate(-50%, 10%)',
-        }}>Transmissão</button>
+        <button style = {button}>Transmissão</button>
         </Link>
+        </div>
 
+        <div>
         <Link to="/dicas/prevenir">
-        <button style = {{
-            color: "white",
-            backgroundColor: "black",
-            textAlign: "center",
-            borderRadius: 10,
-            width: 300,
-            height: 100,
-            fontFamily: "Verdana",
-            margin: 10, 
-            position: 'absolute', left: '60%', top: '55%',
-            transform: 'translate(-50%, 10%)',
-        }}>Prevenir</button>
+        <button style = {button}>Prevenir</button>
         </Link>
 
         <Link to="/dicas/mascara">
-        <button style = {{
-            color: "white",
-            backgroundColor: "black",
-            textAlign: "center",
-            borderRadius: 10,
-            width: 300,
-            height: 100,
-            fontFamily: "Verdana",
-            margin: 10,
-            position: 'absolute', left: '35%', top: '55%',
-            transform: 'translate(-50%, 10%)',
-        }}>Mascara</button>
+        <button style = {button}>Mascara</button>
         </Link>
+        </div>
+        </div>
     </div>
   );
 }

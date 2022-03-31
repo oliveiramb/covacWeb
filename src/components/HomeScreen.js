@@ -46,91 +46,37 @@ const Home = () => {
             margin: 0,
           }
 
-          const alfa = {
-            color: "white",
-             flexDirection: "row",
-             backgroundColor: "black",
-             textAlign: "center",
-             borderRadius: 10,
-             width: 300,
-             height: 100,
-             border: "none",
-             fontFamily: "Verdana",
-             position: 'absolute', left: '30%', top: '110%',
-             transform: 'translate(-50%, 50%)',  
-             
-          }
-
-          const beta = {
-            color: "white",
-             flexDirection: "row",
-             backgroundColor: "black",
-             textAlign: "center",
-             borderRadius: 10,
-             width: 300,
-             height: 100,
-             border: "none",
-             fontFamily: "Verdana",
-             position: 'absolute', left: '70%', top: '110%',
-             transform: 'translate(-50%, 50%)', 
-          }
-
-          const gama = {
-            color: "white",
-            flexDirection: "row",
-            backgroundColor: "black",
-            textAlign: "center",
-            borderRadius: 10,
-            width: 300,
-            height: 100,
-            border: "none",
-            fontFamily: "Verdana",
-            position: 'absolute', left: '30%', top: '130%',
-            transform: 'translate(-50%, 50%)',  
-          }
-
-          const delta = {
-            color: "white",
-            flexDirection: "row",
-            backgroundColor: "black",
-            textAlign: "center",
-            borderRadius: 10,
-            width: 300,
-            height: 100,
-            border: "none",
-            fontFamily: "Verdana",
-            position: 'absolute', left: '70%', top: '130%',
-            transform: 'translate(-50%, 50%)',  
-          }
-
-          const omicron = {
-            color: "white",
-            flexDirection: "row",
-            backgroundColor: "black",
-            textAlign: "center",
-            borderRadius: 10,
-            width: 300,
-            height: 100,
-            border: "none",
-            fontFamily: "Verdana",
-            position: 'absolute', left: '30%', top: '150%',
-            transform: 'translate(-50%, 50%)',  
-          }
           
           const textCovid = {
-            position: 'absolute', left: '50%', top: '100%',
+            position: 'absolute', left: '50%', top: '-20%',
             transform: 'translate(-50%, 50%)',  
           }
 
-          const playStore = {
-            
-            position: 'absolute', left: '13%', top: '240%',
-          }
+          const div = {
+            position: 'absolute', left: '50%', top: '80%',
+            transform: 'translate(-50%, 50%)', 
+        }
+        
+        
+        const button = {
+            color: "white",
+            flexDirection: "row",
+            backgroundColor: "black",
+            textAlign: "center",
+            borderRadius: 10,
+            width: 300,
+            height: 100,
+            border: "none",
+            fontFamily: "Verdana",
+            margin: 20,
+             
+        }
+       
 
           const googleplay = {
             width: 250,
             height: 110,
-            position: 'absolute', left: '43%', top: '290%',
+            position: 'absolute', left: '33%', top: '500%',
           }
 
           const nav = {
@@ -184,20 +130,32 @@ const Home = () => {
       }  
 
       const covacAppLogo = {
-        position: 'absolute', left: '50%', top: '230%',
+        position: 'absolute', left: '50%', top: '60%',
         transform: 'translate(-50%, 50%)',  
         width: 300,
         height: 300,
       }
 
+      const covid = {
+        position: 'absolute', left: '50%', top: '100%',
+        transform: 'translate(-50%, 50%)',  
+       
+      }
+
+      const covacapp = {
+        position: 'absolute', left: '50%', top: '230%',
+        transform: 'translate(-50%, 50%)',  
+       
+      }
     return (
         <div style={nav}>
             <ul style={navLinks}>
-              <li style={pageLink}>Sobre</li>
 
-              <li style={pageLink}>Tipos de covid</li>
+              <a href="./#sobre" style={pageLink}>Sobre</a>
+              
+              <a href="./#covid" style={pageLink}>Tipos de covid</a>
 
-              <li style={pageLink}>App</li>
+              <a href="./#appCovac" style={pageLink}>App</a>
 
               <Link style={link} to="/signin">
               <li>Sign In</li>
@@ -211,7 +169,7 @@ const Home = () => {
             </div>
         <img src={covacLogo} alt="covacLogo" style={image}/>
 
-        <div style={alignText}>
+        <div style={alignText} id="sobre">
         <h1 style={textTitle}>Covac{"\n"}</h1>
         <h2 style={text}>O covac e um site que foi criado para que você tenha um melhor acesso
         todos os dados sobre o Covid-19,{"\n"} se cadastrando você vai poder usufruir
@@ -221,11 +179,14 @@ const Home = () => {
         Os numeros de vacinados no Brasil e em todos os Estados,{"\n"}
         Alem de poder enviar um formulario sobre o seu estado caso voce tenha covid-19</h2>
         </div>
+        <div id="covid" style={covid}>
 
-        <div className="Covid">
+        </div>
+        <div style={div}>
+        
             <h1 style={textCovid}>Tipos de Covid</h1>
-
-           <button style={alfa} onClick={()  => setModalIsOpen1(true)}>Alfa</button>
+            <div>
+           <button style={button} onClick={()  => setModalIsOpen1(true)}>Alfa</button>
            <Modal isOpen={modalIsOpen1} 
            onRequestClose={()=> setModalIsOpen1(false)}
            >
@@ -233,10 +194,8 @@ const Home = () => {
                <p style={text}>Originalmente conhecida como B.1.1.7, a variante Alfa foi identificada pela primeira vez em setembro de 2020, no condado de Kent, no Reino Unido. Essa linhagem é altamente transmissível e já foi detectada em mais de 80 países.</p>
                <button style={buttonPopup} onClick={() => setModalIsOpen1(false)}>Close</button>
            </Modal>
-       </div>
-
-       <div>
-           <button style={beta} onClick={()  => setModalIsOpen2(true)}>Beta</button>
+       
+           <button style={button} onClick={()  => setModalIsOpen2(true)}>Beta</button>
            <Modal isOpen={modalIsOpen2} 
            onRequestClose={()=> setModalIsOpen2(false)}
            >
@@ -246,8 +205,8 @@ const Home = () => {
            </Modal>
        </div>
 
-       <div>
-           <button style={gama} onClick={()  => setModalIsOpen3(true)}>Gama</button>
+       <div >
+           <button style={button} onClick={()  => setModalIsOpen3(true)}>Gama</button>
            <Modal isOpen={modalIsOpen3} 
            onRequestClose={()=> setModalIsOpen3(false)}
            >
@@ -255,10 +214,8 @@ const Home = () => {
                <p style={text}>Inicialmente denominada P.1, foi vista pela primeira vez no Brasil, também possui as mutações E484K e N501Y, além de mais de 30 outras mutações. Foi demonstrado que ela escapa dos efeitos do tratamento com anticorpos monoclonais da Lilly, mas não de outro produzido pela Regeneron.</p>
                <button style={buttonPopup} onClick={() => setModalIsOpen3(false)}>Close</button>
            </Modal>
-       </div>
 
-       <div>
-           <button style={delta} onClick={()  => setModalIsOpen4(true)}>Delta</button>
+           <button style={button} onClick={()  => setModalIsOpen4(true)}>Delta</button>
            <Modal isOpen={modalIsOpen4} 
            onRequestClose={()=> setModalIsOpen4(false)}
            >
@@ -269,7 +226,7 @@ const Home = () => {
        </div>
 
        <div>
-           <button style={omicron} onClick={()  => setModalIsOpen5(true)}>Ômicron</button>
+           <button style={button} onClick={()  => setModalIsOpen5(true)}>Ômicron</button>
            <Modal isOpen={modalIsOpen5} 
            onRequestClose={()=> setModalIsOpen5(false)}
            >
@@ -277,22 +234,8 @@ const Home = () => {
                <p style={text}>A OMS incluiu, no dia 26 de novembro, essa linhagem na lista de variantes de preocupação. Os casos foram identificados na Botsuana, África do Sul, Hong Kong, Israel, Bélgica, Reino Unido, Alemanha, Itália e Holanda.</p>
                <button style={buttonPopup} onClick={() => setModalIsOpen5(false)}>Close</button>
            </Modal>
-       </div>
        
-       <div>
-           <button style={{
-             color: "white",
-             flexDirection: "row",
-             backgroundColor: "black",
-             textAlign: "center",
-             borderRadius: 10,
-             width: 300,
-             height: 100,
-             border: "none",
-             fontFamily: "Verdana",
-             position: 'absolute', left: '70%', top: '150%',
-                 transform: 'translate(-50%, 50%)',  
-           }} onClick={()  => setModalIsOpen6(true)}>Mu</button>
+           <button style={button} onClick={()  => setModalIsOpen6(true)}>Mu</button>
            <Modal isOpen={modalIsOpen6} 
            onRequestClose={()=> setModalIsOpen6(false)}
            >
@@ -303,19 +246,7 @@ const Home = () => {
        </div>
 
        <div>
-           <button style={{
-             color: "white",
-             flexDirection: "row",
-             backgroundColor: "black",
-             textAlign: "center",
-             borderRadius: 10,
-             width: 300,
-             height: 100,
-             border: "none",
-             fontFamily: "Verdana",
-             position: 'absolute', left: '50%', top: '170%',
-                 transform: 'translate(-50%, 50%)',  
-           }} onClick={()  => setModalIsOpen7(true)}>Lambda</button>
+           <button style={button} onClick={()  => setModalIsOpen7(true)}>Lambda</button>
            <Modal isOpen={modalIsOpen7} 
            onRequestClose={()=> setModalIsOpen7(false)}
            >
@@ -326,9 +257,10 @@ A variante não é tão preocupante quanto a variante Delta nos Estados Unidos, 
                <button style={buttonPopup} onClick={() => setModalIsOpen7(false)}>Close</button>
            </Modal>
        </div>
-           
-           <div>
-               <h1 style={playStore}>Você tambem pode baixar o nosso aplicativo no Google Play Store.</h1>
+       </div>
+
+           <div id="appCovac" style={covacapp}>
+               <h1 >Você tambem pode baixar o nosso aplicativo no Google Play Store.</h1>
                <img src={covacApp} alt="covacAppLogo" style={covacAppLogo}/>
                <img src={googleplayLogo} alt="googleplay" style={googleplay}/>
            </div>
